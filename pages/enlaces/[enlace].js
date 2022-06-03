@@ -42,7 +42,7 @@ export default ({enlace}) => {
 
         const data = {
             password
-        }
+        };
 
         try {
             const resultado = await clienteAxios.post(`/api/enlaces/${enlace.enlace}`, data);
