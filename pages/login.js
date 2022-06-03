@@ -8,11 +8,9 @@ import { useRouter } from 'next/router';
 
 const Login = () => {
 
-    // definir el context
     const AuthContext = useContext(authContext);
     const { mensaje, autenticado, iniciarSesion } = AuthContext;
 
-    // Next router
     const router = useRouter();
 
     useEffect(() => {
@@ -22,7 +20,6 @@ const Login = () => {
     }, [autenticado]);
 
 
-    // Formulario y validación con formik y Yup
     const formik = useFormik({
         initialValues: {
           email: '',
