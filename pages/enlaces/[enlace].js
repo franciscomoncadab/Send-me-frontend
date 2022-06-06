@@ -44,6 +44,7 @@ export default ({enlace}) => {
 
         try {
             const resultado = await clienteAxios.post(`/api/enlaces/${enlace.enlace}`, data);
+            enlace.archivo = resultado.data.archivo;
             setTienePassword(resultado.data.password);
         } catch (error) {
             mostrarAlerta(error.response.data.msg);
